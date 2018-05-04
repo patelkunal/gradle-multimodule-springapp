@@ -1,0 +1,13 @@
+apply plugin: "application"
+
+mainClassName = "cli.CliApp"
+
+run {
+    if(System.getProperty("exec.args") != null)
+    	args System.getProperty("exec.args").split()
+}
+
+dependencies {
+	compile project(':core')
+}
+
